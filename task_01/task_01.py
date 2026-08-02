@@ -65,22 +65,28 @@ fibonacci(n) "пам'ятати" стан cache між різними викли
 '''
 
 def caching_fibonacci():
+    # Create a cache dictionary
     cache = {}
 
     def fibonacci(n):
+        # Base cases
         if n <= 0:
             return 0
         elif n == 1:
             return 1
+        # Return the cached result if it exists
         elif n in cache:
             return cache[n]
+        # If the result is not in the cache, compute it recursively and store it
         else:
             cache[n] = fibonacci(n - 1) + fibonacci(n - 2)
             return cache[n]
 
+    # create a closure
     return fibonacci
 
+# testing the caching_fibonacci function
 fib = caching_fibonacci()
-print(fib(10))  # Виведе 55
-print(fib(15))  # Виведе 610
+print(fib(10))  # Prints 55
+print(fib(15))  # Prints 610
 

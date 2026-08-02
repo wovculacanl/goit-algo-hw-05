@@ -65,6 +65,11 @@ fibonacci(n) "пам'ятати" стан cache між різними викли
 '''
 
 def caching_fibonacci():
+    '''
+    Функція, що створює замикання для обчислення чисел Фібоначчі з використанням кешування.
+    :return: Внутрішня функція fibonacci(n).
+
+    '''
     # Create a cache dictionary
     cache = {}
 
@@ -86,7 +91,9 @@ def caching_fibonacci():
     return fibonacci
 
 # testing the caching_fibonacci function
-fib = caching_fibonacci()
-print(fib(10))  # Prints 55
-print(fib(15))  # Prints 610
+if __name__ == "__main__":
+    fib = caching_fibonacci()
+    print(fib(10))  # Prints 55
+    print(fib(15))  # Prints 610
+
 

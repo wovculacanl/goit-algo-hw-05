@@ -66,8 +66,8 @@ fibonacci(n) "пам'ятати" стан cache між різними викли
 
 def caching_fibonacci():
     '''
-    Функція, що створює замикання для обчислення чисел Фібоначчі з використанням кешування.
-    :return: Внутрішня функція fibonacci(n).
+    A function that creates a closure for calculating Fibonacci numbers using caching.
+    return: Internal function fibonacci(n).
 
     '''
     # Create a cache dictionary

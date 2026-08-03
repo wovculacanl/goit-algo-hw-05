@@ -93,7 +93,7 @@ def add_contact(args, contacts):
     """
     Adds a new contact to the contacts dictionary.
     """
-    name, phone = args
+    name, phone = args[0], args[1]
     contacts[name] = phone
     return "Contact added."
 
@@ -104,7 +104,7 @@ def change_contact(args, contacts):
     Replaces the phone number for an existing contact in the contacts dictionary.
     '''
 
-    name, new_phone = args
+    name, new_phone = args[0], args[1]
     _ = contacts[name]  # This will raise KeyError if the contact does not exist
     contacts[name] = new_phone
     return "Contact updated."
